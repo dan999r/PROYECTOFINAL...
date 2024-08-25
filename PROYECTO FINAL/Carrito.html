@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pedido</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/Carrito.Css">
+</head>
+<body>
+    
+
+ 
+
+	<div class="toggle-menu" onclick="toggleMenu()" style="color:gold">☰</div>
+
+		<nav id="side-menu">
+		<ul class="menu">
+		  <li><a href="Index.html"><i class="fa-solid fa-home"></i> Inicio</a></li>
+		  <li><a href="mision y vision.html"><i class="fa-solid fa-info-circle"></i> Sobre Nosotros</a></li>
+      <li><a href="Carrito.html"><i class="fa-solid fa-cart-shopping"></i></i> Pedir Ya</a></li>
+		  <li><a href="contactos.html"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+		  <li><a href="Nuestra Ubicacion.html"><i class="fa-solid fa-map-marker-alt"></i> Ubicación</a></li>
+		  <li><a href="Terminos Y Condiciones.html"><i class="fa-solid fa-file-contract"></i> Términos y Condiciones</a></li>
+		  <li><a href="Politica y privacidad.html"><i class="fa-solid fa-shield-alt"></i> Política de privacidad</a></li>
+		  <li><a href="Descarga"><i class="fa-solid fa-download"></i> Nuestra App</a></li>
+      <li><a href="Caja de comentarios.html"><i class="fa-solid fa-box"></i></i>Dejanos tu comentarios</a></li>
+		</ul>
+		</nav> 
+
+
+  </div>
+
+ <!-- Página 1: Carrito  -->
+ <div id="pagina-confirmacion" class="pagina">
+    <section class="titulo-confirmacion">
+
+     
+        <div class="contenedor">
+           
+            <div class="contenido-principal">
+                <div class="seccion-productos">
+                    <div class="fila-productos">
+                        <!-- Productos en la primera fila -->
+                        <div class="tarjeta-producto">
+                            <img src="Img/Jamaica.png" alt="Fresco de Jamaica">
+                            <div class="informacion-producto">
+                                <span class="nombre-producto">Fresco de Jamaica</span>
+                                <span class="precio-producto">$0.35</span>
+                                <button class="boton-agregar" data-name="Fresco de Jamaica" data-price="0.35">
+                                    <i class="fas fa-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tarjeta-producto">
+                            <img src="Img/Eloteslocos.jpg" alt="Elotes Locos">
+                            <div class="informacion-producto">
+                                <span class="nombre-producto">Elotes Loco</span>
+                                <span class="precio-producto">$1.00</span>
+                                <button class="boton-agregar" data-name="Elotes Locos" data-price="1.00">
+                                    <i class="fas fa-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fila-productos">
+                        <!-- Productos en la segunda fila -->
+                        <div class="tarjeta-producto">
+                            <img src="Img/Baleada.jpg" alt="Baleadas">
+                            <div class="informacion-producto">
+                                <span class="nombre-producto">Baleadas</span>
+                                <span class="precio-producto">$1.25</span>
+                                <button class="boton-agregar" data-name="Baleadas" data-price="1.25">
+                                    <i class="fas fa-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tarjeta-producto">
+                            <img src="Img/limonada.jpg" alt="Limonada">
+                            <div class="informacion-producto">
+                                <span class="nombre-producto">Limonada</span>
+                                <span class="precio-producto">$0.35</span>
+                                <button class="boton-agregar" data-name="Limonada" data-price="0.35">
+                                    <i class="fas fa-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tarjeta-producto">
+                            <img src="Img/Elote Preparado.jpg" alt="Elote preparado">
+                            <div class="informacion-producto">
+                                <span class="nombre-producto">Elote en Vaso</span>
+                                <span class="precio-producto">$1.25</span>
+                                <button class="boton-agregar" data-name="Elote en Vaso" data-price="1.25">
+                                    <i class="fas fa-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <aside class="carrito">
+                    <h2>Orden de pedido <i class="fas fa-trash vaciar-carrito" id="vaciar-carrito" title="Vaciar carrito"></i></h2>
+                    <div class="lista-carrito">
+                        <!-- Aquí se agregan los productos del carrito -->
+                    </div>
+                    <div class="total-carrito">
+                        Total: $0.00
+                    </div>
+                    <div class="grupo-botones">
+                        <button id="finalizar-compra">
+                            <i class="fas fa-check"></i> Realizar Pedido
+                        </button>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+</div>
+
+  
+<!-- Mensaje de progreso -->
+<div id="mensaje-progreso" class="mensaje mensaje-progreso oculto">
+    <p>Su orden está en proceso. Por favor, espere...</p>
+</div>
+
+<!-- Mensaje de éxito -->
+<div id="mensaje-exito" class="mensaje mensaje-exito oculto">
+  <p> Su pedido está casi listo. Complete el formulario a continuación para proceder.</p>
+  <button id="confirmar-formulario">Completar el Formulario</button>
+</div>
+
+
+
+<!-- Mensaje de proceso del formulario -->
+<div id="mensaje-envio" class="mensaje oculto">
+    <p>Enviando información, por favor espere...</p>
+</div>
+<!-- Mensaje de exito formulario -->
+<div id="mensaje-confirmacion" class="mensaje oculto">
+    <p>Su orden fue Realizada con éxito. Por favor, revise su correo electrónico para más detalles.</p>
+    <button id="confirmar-envio">Aceptar</button>
+</div>
+
+
+
+
+
+ 
+    <!-- Página 2: DE CONFIRMACION Formulario -->
+    <div id="pagina-formulario" class="pagina oculto">
+   
+   
+        <div class="contenedooor">
+            <h2>Formulario de Pedido</h2>
+            <div class="mensaje-confirmacion">
+              Para proceder con su orden, complete el formulario con la información requerida. Después de enviar el formulario, recibirá un resumen detallado de su pedido en su correo electrónico. Nos aseguraremos de que su pedido sea procesado de manera efectiva.
+            </div>
+            <form id="formulario-pedido">
+              <div class="fila-formulario">
+                <div class="grupo-formulario">
+                  <label for="nombre"><i class="fas fa-user"></i> Nombre Completo:</label>
+                  <input type="text" id="nombre" name="nombre" required aria-required="true">
+                </div>
+                <div class="grupo-formulario">
+                  <label for="correo"><i class="fas fa-envelope"></i> Correo Electrónico:</label>
+                  <input type="email" id="correo" name="correo" required aria-required="true">
+                </div>
+              </div>
+        
+              <!-- Método de entrega -->
+              <div class="contenedor-entrega">
+                <div class="metodos-entrega">
+                  <label>
+                    <input type="radio" id="recoger" name="metodo-entrega" value="Recoger en Caja" required aria-required="true">
+                    <i class="fas fa-store"></i> Recoger en Caja
+                  </label>
+                  <label>
+                    <input type="radio" id="domicilio" name="metodo-entrega" value="Entrega a Domicilio" required aria-required="true">
+                    <i class="fas fa-shipping-fast"></i> Entrega a Domicilio
+                  </label>
+                </div>
+              </div>
+        
+              <!-- Dirección adicional (solo se muestra si se selecciona 'Entrega a Domicilio') -->
+              <div id="direccion-adicional" class="direccion-adicional">
+                <div class="fila-formulario">
+                  <div class="grupo-formulario">
+                    <label for="direccion"><i class="fas fa-map-marker-alt"></i> Dirección de Envío:</label>
+                    <input type="text" id="direccion" name="direccion">
+                  </div>
+                </div>
+                <div class="fila-formulario">
+                  <div class="grupo-formulario">
+                    <label for="telefono"><i class="fas fa-phone"></i> Número de Teléfono:</label>
+                    <input type="text" id="telefono" name="telefono">
+                  </div>
+                  <div class="grupo-formulario">
+                    <label for="departamento"><i class="fas fa-building"></i> Departamento:</label>
+                    <input type="text" id="departamento" name="departamento">
+                  </div>
+                  <div class="grupo-formulario">
+                    <label for="municipio"><i class="fas fa-city"></i> Municipio:</label>
+                    <input type="text" id="municipio" name="municipio">
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Botón de enviar información -->
+              <div class="grupooo-botones">
+            <center>  <button type="submit"><i class="fas fa-paper-plane"></i> Enviar Información</button></center>  
+              </div>
+            </form>
+          </div>
+
+
+
+
+
+
+          <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script src="JavaScript/Carrito.js"></script>
+            
+</body>
+</html>

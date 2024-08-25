@@ -1,0 +1,385 @@
+ /* Estilos generales de la página */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('Fondo\ Principal.jpg');
+  background-size: cover;
+  background-position: center;
+  color: yellow; /* Texto principal */
+}
+
+/* Caja de comentarios */
+.comment-box {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000000; /* Fondo del contenedor */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: rgb(255, 215, 0);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid rgb(255, 215, 0); /* Color a los cuadros */
+  border-radius: 4px;
+}
+
+/* Enviar comentario */
+button {
+  padding: 10px 15px;
+  background-color: rgb(255, 215, 0);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(255,215,0);  /* cambio de color del boton */
+}
+
+#response-message {
+  margin-top: 20px;
+  color: rgb(255,215,0);
+  font-weight: bold;
+}
+
+header {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 80px 20px; /* Espacio interior del encabezado */
+}
+
+/* Fondo semi-transparente para el título */
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  z-index: 0;
+}
+
+/* Contenedor del logotipo */
+.container {
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: -60px;
+  right: 20px;
+  z-index: 999; /* Logotipo sobre el encabezado */
+}
+
+.logo img {
+  max-width: 115px;
+  border: 2px solid #ffffff; /* Línea blanca alrededor */
+  border-radius: 43%; /* Redondea el logo */
+}
+
+
+
+header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+}
+
+/* Estilos del menú de navegación */
+nav {
+  position: fixed;
+  top: 0;
+  left: -279px; /* Oculta el menú */
+  width: 250px;
+  height: 100%;
+  padding: 15px;
+  transform: translateX(0);
+  transition: left 0.3s ease; /* Transición suave al mostrar y ocultar */
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  padding-top: 75px; /* Espacio superior para los enlaces de navegación */
+}
+
+/* Mostrar el menú lateral cuando está activo */
+nav.active {
+  left: 0;
+}
+
+/* Estilos de la lista de navegación */
+nav .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: justify; /* Justifica el contenido del menú */
+}
+
+nav .menu li {
+  margin-bottom: 17px; /* Espacio entre elementos del menú */
+}
+
+nav .menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: block; /* Ayuda a mantener el espacio en 'margin-bottom' */
+  padding: 10px 0;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav .menu a:hover {
+  color: gold; /* Cambio de color a dorado al pasar el mouse */
+}
+
+/* Botón de menú para dispositivos móviles */
+.toggle-menu {
+  position: fixed;
+  top: 11px;
+  left: 20px;
+  font-size: 2.5em;
+  color: #fbf7f7;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu a i {
+  color: #faf7f7; /* Color general para todos los íconos */
+  margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+/* Pie de página */
+footer {
+  background-color: #000000; /* Fondo negro */
+  color: #FFFFFF; /* Texto blanco */
+  padding: 40px 20px; /* Padding del pie de página */
+  text-align: center;
+  border-top: 2px solid #333333; /* Borde superior gris oscuro */
+}
+
+.highlight-link {
+  font-size: 1.4rem; /* Tamaño de fuente más grande */
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 20px; /* Espacio inferior */
+  display: inline-block; /* Mostrar como bloque */
+  color: #bdbcbc; /* Color del enlace */
+  position: relative; /* Posicionamiento relativo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Espacio entre el icono y el texto */
+  text-decoration: none; /* Quitar subrayado del enlace */
+}
+
+.highlight-link i {
+  color: #FFFFFF; /* Icono en blanco */
+}
+
+.highlight-link:hover {
+  color: gold; /* Cambio a color dorado al pasar el cursor */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  margin: 10px;
+  text-align: left;
+  max-width: 300px;
+}
+
+.footer-title {
+  font-size: 1.2rem; /* Tamaño del título */
+  margin-bottom: 10px; /* Espacio inferior */
+  font-weight: bold;
+  color: gold; /* Color dorado del título */
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem; /* Espacio entre iconos */
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  justify-content: center;
+  width: 2.5rem; /* Tamaño */
+  height: 2.5rem; /* Tamaño */
+  border-radius: 50%;
+  color: #FFFFFF; /* Color de los íconos */
+  font-size: 1.2rem; /* Tamaño de fuente */
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a.facebook {
+  background-color: #102d6a;
+}
+
+.social-icons a.facebook:hover {
+  background-color: #2c14e9;
+}
+
+.social-icons a.whatsApp {
+  background-color: #098436;
+}
+
+.social-icons a.whatsApp:hover {
+  background-color: #1ea24e;
+}
+
+.social-icons a.instagram {
+  background: linear-gradient(
+    45deg,
+    #a50707, /* Colores de Instagram */
+    #941942,
+    #c13584,
+    #431164,
+    #172778
+  );
+}
+
+.social-icons a.instagram:hover {
+  background: linear-gradient(
+    45deg,
+    #a14545,
+    #964170,
+    #703a66,
+    #312d61,
+    #354bae
+  );
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espacio entre el ícono y el texto */
+  color: #888888; /* Color gris claro inicial del texto */
+  transition: color 0.3s ease; /* Transición de color */
+  text-decoration: none; /* Quitar subrayado del enlace */
+}
+
+.footer-links a:hover {
+  color: gold; /* Cambio a color dorado al pasar el cursor */
+}
+
+.footer-links a i {
+  color: #FFFFFF; /* Color de los íconos en blanco */
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 1rem; /* Ajuste de tamaño */
+  color: #d0cdcd; /* Color gris claro */
+  font-weight: normal; /* Peso normal */
+}
+
+.contact-info p {
+  margin: 5px 0;
+  color: #888888; /* Color gris claro para la información de contacto */
+}
+
+.contact-info {
+  font-size: 0.9rem;
+  color: #888888; /* Color gris claro para la información de contacto */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  header {
+    padding: 60px 10px;
+  }
+
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .comment-box {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 40px 10px;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  header p {
+    font-size: 0.9em;
+  }
+
+  .footer-section {
+    margin: 5px 0;
+  }
+
+  .social-icons a {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  .comment-box {
+    padding: 10px;
+  }
+
+  .toggle-menu {
+    font-size: 2em;
+  }
+}
+
+

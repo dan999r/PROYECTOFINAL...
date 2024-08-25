@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>El Sazón de Mi Tierra</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+	<link rel="stylesheet" href="CSS/Index.css">
+
+
+</head>
+
+<body>
+<!-- Menú desplegable de la página principal que enlaza a todas las paginas secundarias que aparecen ahí -->
+ 
+	<div class="toggle-menu" onclick="toggleMenu()" style="color:gold">☰</div>
+
+	<nav id="side-menu">
+		<ul class="menu">
+			<li><a href="Index.html"><i class="fa-solid fa-home"></i>Inicio</a></li>
+			<li><a href="mision y vision.html"><i class="fa-solid fa-info-circle"></i>Sobre Nosotros</a></li>
+			<li><a href="Carrito.html"><i class="fa-solid fa-cart-shopping"></i></i>Pedir Ya</a></li>
+			<li><a href="contactos.html"><i class="fa-solid fa-envelope"></i>Contacto</a></li>
+			<li><a href="Nuestra Ubicacion.html"><i class="fa-solid fa-map-marker-alt"></i>Ubicación</a></li>
+			<li><a href="Terminos Y Condiciones.html"><i class="fa-solid fa-file-contract"></i>Términos y Condiciones</a></li>
+			<li><a href="Politica y privacidad.html"><i class="fa-solid fa-shield-alt"></i>Política de privacidad</a></li>
+			<li><a href="Descarga"><i class="fa-solid fa-download"></i>Nuestra App</a></li>
+			<li><a href="Caja de comentarios.html"><i class="fa-solid fa-box"></i></i>Dejanos tu comentario</a></li>
+		</ul>
+	</nav>
+
+    <!-- div que muestra la imagen de fodo de la página -->
+	<div class="img-background">
+
+		<header>
+			<!-- Maquetado que se encarga de encabezado -->
+			<div class="resposive">
+				<div class="container">
+					<div class="logo">
+						<img src="Img/logo1.jpg" alt="Logo de El Sazón de mi Tierra">
+					</div>
+					<div class="text">
+						<h1>Bienvenidos a El Sazón de mi Tierra</h1>
+						<p class="texto-intro">El verdadero sabor de El Salvador .
+							Cada producto fue preparado 100% por manos salvadoreñas.
+							Pide lo que más te guste ¡Muy buen provecho!
+						</p>
+					</div>
+				</div>
+			</div>
+
+		</header>
+
+		<!-- Carrusel que muestra el producto a ofrecer -->
+		<div class="borde">
+
+			<div class="carousel">
+				<img src="Img/Jamaica.jpg" alt="Imagen 1">
+				<img src="Img/Limonada.jpg" alt="Imagen 2">
+				<img src="Img/Eloteslocos.jpg" alt="Imagen 3">
+				<img src="Img/Elote Preparado.jpg" alt="Imagen 4">
+				<img src="Img/Baleadas.jpg" alt="Imagen 5">
+			</div>
+		</div>
+
+	
+		<!-- Esta sección encarga de mantener una división con el carrusel y las cartas de productos se visualicen de manera ordenada -->
+		 <!-- También hay un id que hace que al dar clic te lleve a los productos -->
+			<section class="container top-products" id="container-options">
+
+				<h1 class="heading-1">Bebidas y Comidas</h1>
+
+				<div class="container-options">
+					<span class="active"><a href="#container-options">Productos más recientes</a></span>
+				</div>
+
+
+				<div class="container-products">
+					<!-- Producto 1 -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="Img/Jamaica.jpg" alt="Jamaica.jpg" />
+							<span class="overlay">Más vendidos</span>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3 class="product-name">Jamaica</h3>
+							<div class="button-grid">
+								<span class="add-cart">
+									<a href="Carrito.html"><i class="fa-solid fa-basket-shopping"></i></a>
+								</span>
+								<div class="button">
+									<a href="jamaica.html"><span>Ingredientes</span></a>
+								</div>
+								<p class="price">$0.35<span>$0.45</span></p>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- Producto 2 -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="Img/Limonada.jpg" alt="limonada.jpg" />
+							<span class="overlay">Más vendido</span>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3 class="product-name">Limonada</h3>
+							<div class="button-grid">
+								<span class="add-cart">
+									<a href="Carrito.html"><i class="fa-solid fa-basket-shopping"></i></a>
+								</span>
+								<div class="button">
+									<a href="limonada.html"> <span>Ingredientes</span></a>
+								</div>
+								<p class="price">$0.35<span>$0.45</span></p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Producto 3 -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="Img/Eloteslocos.jpg" alt="Eloteslocos.jpg" />
+							<a href="elote loco.html"> <span class="overlay">Mejor valorado</span></a>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+							<h3 class="product-name">Elotes locos</h3>
+							<div class="button-grid">
+								<span class="add-cart">
+									<a href="Carrito.html"><i class="fa-solid fa-basket-shopping"></i></a>
+								</span>
+								<div class="button">
+									<a href="elote loco.html"><span>Ingredientes</span></a>
+								</div>
+								<p class="price">$1.00<span>$1.50</span></p>
+							</div>
+						</div>
+					</div>
+					<!-- Producto 4 -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="Img/Baleadas.jpg" alt="Baleadas.jpg" />
+							<span class="overlay">Especialidad de la casa</span>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3 class="product-name">Baleadas</h3>
+							<div class="button-grid">
+								<span class="add-cart">
+									<a href="Carrito.html"><i class="fa-solid fa-basket-shopping"></i></a>
+								</span>
+								<div class="button">
+									<a href="baleadas.html"> <span>Ingredientes</span></a>
+								</div>
+								<p class="price">$1.25</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Producto 5 -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="Img/Elote Preparado.jpg" alt="ElotePreparado.jpg" />
+							<span class="overlay">¡Más recomendado!</span>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3 class="product-name">Elotes preparados</h3>
+							<div class="button-grid">
+								<span class="add-cart">
+									<a href="Carrito.html"><i class="fa-solid fa-basket-shopping"></i></a>
+								</span>
+								<div class="button">
+									<a href="elote preparado.html"> <span>Ingredientes</span></a>
+								</div>
+								<p class="price">$1.25</p>
+							</div>
+						</div>
+					</div>
+
+			</section>
+
+
+			</head>
+			<body>
+
+				<!-- Pie de la página principal -->
+
+				<footer>
+					<a href="Equipo de trabajo.html" class="highlight-link"><i class="fa-solid fa-users"></i>Nuestro
+						Equipo</a>
+
+
+					<div class="footer-content">
+						<div class="footer-section">
+							<div class="footer-title">Nuestras Redes</div>
+							<div class="social-icons">
+								<a href="https://www.facebook.com/profile.php?id=61558971046753&mibextid=ZbWKwL"
+									class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+								<a href="https://wa.me/message/OUJP5V2RV6WVC1" class="whatsApp"><i
+										class="fa-brands fa-whatsapp"></i></a>
+								<a href="https://www.instagram.com/elsazon.de.mi.tierra?igsh=MWtwemk0Y21oaXljMw=="
+									class="instagram"><i class="fa-brands fa-instagram"></i></a>
+							</div>
+						</div>
+						<div class="section">
+							<div class="contenido">
+							<div class="footer-title">Información de Contacto</div>
+							</div>
+							<p><i class="fa-solid fa-phone" style="color: #FFFFFF;"></i> <span
+									style="color: #888888;">Cel:74373575</span></p>
+							<p><i class="fa-solid fa-envelope" style="color: #FFFFFF;"></i> <span
+									style="color: #888888;">Email:Sazondemitierra@gmail.com</span></p>
+							<p><i class="fa-solid fa-map-marker-alt" style="color: #FFFFFF;"></i> <span
+									style="color: #888888;">Dirección:Instituto Nacional Ciudad Delgado</span></p>
+						</div>
+						<div class="footer-section footer-links">
+							<div class="footer-title">Enlaces Útiles</div>
+							<a href="Terminos Y Condiciones.html" class="terms"><i
+									class="fa-solid fa-file-contract"></i> Términos y Condiciones</a>
+							<a href="Politica y privacidad.html" class="privacy"><i class="fa-solid fa-shield-alt"></i>
+								Política de privacidad</a>
+							<a href="mision y vision.html" class="about"><i class="fa-solid fa-info-circle"></i>Sobre
+								Nosotros</a>
+						</div>
+					</div>
+					<div class="footer-bottom"><strong>&copy;2024 Derechos Reservados El Sazón de mi Tierra</strong>
+					</div>
+				</footer>
+
+
+
+
+
+
+			<!-- Javas Scripts que está utilizando la página principal -->
+
+				<script src="JavaScript/Indexmenú.js"></script>
+
+				<script src="JavaScript/Indexcarrusel.js"></script>
+
+				<script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+
+			</body>
+
+</html>

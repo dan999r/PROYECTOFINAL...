@@ -1,0 +1,1182 @@
+:root {
+	--primary-color: #100f0ff8;
+	--background-color: yellow;
+	--dark-color: #100f0ff8;
+	--second-color: gold;
+	--first-color: #fee9e9ae;
+	/* Corrige el nombre */
+	--three-color: #423f3f;
+	--four-color: #fff;
+}
+
+html {
+	font-size: 89.5%;
+}
+
+
+.texto-intro {
+	font-size: 1.4em;
+	margin-top: 1.2rem;
+	line-height: 1.6;
+	position: relative;
+	max-width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 1.2rem;
+	border-radius: 0.7rem;
+	box-shadow: 0 4px 12px rgba(243, 241, 241, 0.3)
+}
+
+/*Le da estilo al menú desplegable de la pagina y al encabezado*/
+
+
+/* Estilos generales de la página */
+body {
+	max-width: 100%;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #FFFFFF;/* Texto principal blanco */
+	overflow-x: hidden; /*No permite que haya un dezplazamiento horizontal*/
+	
+
+}
+
+.img-background {
+	background-image: url('../Img/Fondo\ Principal.jpg');
+	background-repeat: repeat-y;
+	background-size: 125rem;
+}
+
+
+header {
+	position: relative;
+	text-align: center;
+	color: #fff;
+	padding: 7% 5%;
+	/* Espacio interior del encabezado */
+}
+
+/* Fondo semi-transparente para  el titulo*/
+header::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.8);
+	/* Fondo semi-transparente */
+	z-index: 0;
+}
+
+/* Contenedor del logotipo */
+.container {
+	position: relative;
+}
+
+
+.logo {
+	position: absolute;
+	top: -20%;
+	right: -7%;
+	z-index: 999;
+	/* Logotipo sobre el encabezado */
+}
+
+.logo img {
+	max-width: 45%;
+	border: 2px solid #ffffff;
+	/* linea blanca  alrededor */
+	border-radius: 43%;
+	/* redondea el logo */
+	-webkit-box-reflect: below 1px linear-gradient(transparent, #0002);
+}
+
+header h1 {
+	font-size: 3em;
+	margin: 0;
+}
+
+header p {
+	font-size: 1.2em;
+	margin-top: 10px;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	/* Sombra de texto */
+}
+
+/* Estilos del menú de navegación */
+nav {
+	position: fixed;
+	top: 0;
+	left: -279px;
+	/*oculta el menu*/
+	width: 250px;
+	height: 100%;
+	padding: 15px;
+	transform: translateX(0);
+	transition: left 0.3s ease;
+	/* Transición suave al mostrar y ocultar */
+	z-index: 1000;
+	background: rgba(0, 0, 0, 0.7);
+	/* Fondo semi-transparente */
+	padding-top: 75px;
+	/* Espacio superior para los enlaces de navegación */
+}
+
+/* Mostrar el menú lateral cuando está activo */
+nav.active {
+	left: 0;
+}
+
+/* Estilos de la lista de navegación */
+nav .menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: justify;
+	/* Justifica el contenido del menú */
+}
+
+
+nav .menu li {
+	margin-bottom: 17px;
+	/* da espacio al menu mientas mas se le sube mas separado queda*/
+}
+
+nav .menu a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.2em;
+	display: block;
+	/* le ayuda a mantener lo q se le ordena a margin-bottom*/
+	padding: 10px 0;
+	transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav .menu a:hover {
+	color: gold;
+	/* Cambio de color al pasar el mouse */
+}
+
+/* Botón de menú para dispositivos móviles */
+.toggle-menu {
+	position: fixed;
+	top: 11px;
+	left: 20px;
+	font-size: 2.5em;
+	color: #fbf7f7;
+	cursor: pointer;
+	z-index: 1001;
+}
+
+.menu a i {
+	color: #faf7f7;
+	/* Color general para todos los íconos */
+	margin-right: 10px;
+	/* Espacio entre el ícono y el texto */
+}
+
+
+
+
+
+/* Carrusel quemuestra imagenes de los productos*/
+.carousel {
+	border: solid 1px rgba(250, 249, 249, 0.822);
+	box-shadow: -5px -5px 50px rgba(255, 254, 254, 0.353);
+	/*sombra de alredor de la img*/
+	display: flex;
+	margin-top: 10%;
+	overflow: hidden;
+	max-width: 100%;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	border-radius: 25rem;
+	/* Redondeo más sutil */
+}
+
+.carousel img {
+	width: 100%;
+	max-width: 100%;
+	max-height: 95vh;
+	object-fit: cover;
+	filter: brightness(1.0) contrast(1.0);
+	/* Ajuste de brillo y contraste */
+	transition: opacity 0.5s ease-in-out;
+	border: 2px solid rgba(255, 255, 255, 0.6);
+	/* Borde blanco semitransparente */
+}
+
+.carousel img:hover {
+	transform: scale(1.05);
+	/* Aumenta un poco el tamaño de la imagen */
+	transition: transform 0.3s ease-in-out;
+}
+
+.carousel img.invisible {
+	display: none;
+}
+
+
+
+
+
+/* ***************** */
+/*    Utilidades     */
+/* ***************** */
+
+
+/* Sirve para darle un anco max de 130 rem y magen de 0 y 
+auto también para alinear el texto grosor de texto y tamaño*/
+
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+.heading-1 {
+	text-align: center;
+	font-weight: 500;
+	font-size: 3rem;
+}
+
+/* ********************************** */
+/*            TOP PRODUCTS            */
+/* ********************************** */
+
+section {
+	display: flex;
+	margin-top: 8%;
+	justify-content: center;/* Centra el contenedor de productos en la página */
+	padding: 2rem;/* Espacio alrededor de la sección */
+}
+
+.button span {
+	border-radius: 1rem;
+	padding: 1rem 1rem;
+	background-color: #000;
+	transition: box-shadow 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-weight: 600;
+	font-size: 1.1rem;
+	border: 1px solid white;
+	height: 3vh;
+	/* Ajusta la altura del contenedor según tus necesidades */
+}
+
+
+.button span:hover {
+	box-shadow: -2px -2px 20px gold;
+	/*cuando el cursor pase encima se vera el sombreado*/
+	background-color: gold;
+	color: #000;
+}
+
+.button span:hover:active {
+	box-shadow: -2px -2px 20px rgb(169, 0, 0);
+	/*cuando el cursor pase encima se vera el sombreado*/
+	border: 1px solid rgb(255, 255, 255);
+	background-color: rgb(169, 0, 0);
+	color: #ffffff;
+}
+
+/* Elimina el subrayado del enlace dentro del div con la clase 'button' */
+.button a {
+	text-decoration: none;
+	/* Elimina el subrayado del enlace */
+	color: inherit;
+}
+
+/*Edit de la parte de canasta y ver más */
+
+
+.overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 92.5%;
+	max-width: 92.5%;
+	padding: 1rem;
+	background: rgba(0, 0, 0, 0.6);
+	/* Fondo semi-transparente oscuro */
+	color: #fff;
+	text-align: center;
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+	/* Sombra blanca */
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.container-img:hover .overlay {
+	opacity: 1;
+}
+
+.content-card-product {
+	margin-top: 7%;
+
+}
+
+.content-pro-2 {
+	margin-top: 7%;
+
+}
+
+.price span {
+	text-decoration: line-through;
+	color: #888;
+	margin-left: 5vh;
+}
+
+.add-cart a {
+	color: #333;
+	font-size: 1em;
+}
+
+
+.container-img {
+	width: 100%;/*ancho de la img*/
+	height: auto;/*alto de la img*/
+	margin: 0 auto;
+	border: 0.3rem solid rgba(0, 0, 0, 0.261);/*borde alredor de las imagne */
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.911);/*sombreado alrededor de la img*/
+	filter: grayscale(0.3);/*sirve para darle color a las img*/
+	transition: transform 0.9s ease, filter 0.3 s ease;/*velocidad de transición al pasar el cursor sobre la img y velocidad de pasar a color*/
+
+}
+
+.container-img:hover {
+	transform: scale(1.1);/*para que la imagen se amplie un poco hacia afuera*/
+	filter: grayscale(0);/*deja ver el color real a la img*/
+}
+
+
+.container-options a {
+	color: #faf7f7;/* color de letras del texto*/
+	text-decoration: none;/*Quita el subrayado de texto*/
+}
+
+.top-products {
+	display: flex;/*hace posible poder editar tamaño*/
+	flex-direction: column;
+	gap: 2rem;/*Espacio entre el botón de más recientes*/
+	margin-bottom: 3rem;/*Espacio entre las car-products y la box de reseñas (margen que tiene cada recuadro)*/
+}
+
+
+.container-options {
+	transition: box-shadow 0.9s ease;/*para sombreado encima de los container-options */
+	display: flex;/* deja editar tamaño, etc.*/
+	justify-content: center;/* para que este todo el contenido justificado (centrado)*/
+	gap: 3rem;/* separación de un bloque y otro*/
+	margin-bottom: 5rem;/* margen en cada recuadro*/
+}
+
+.container-options span:hover {
+	box-shadow: 5px 10px 15px rgba(201, 190, 190, 0.883);/*cuando el cursor pase encima se vera el sombreado*/
+}
+
+.container-options span {
+
+	padding: 0.7rem 5rem;/* tamaño de el boton de produtos más recientes*/
+	font-size: 1.4rem;/*tamaño de letra*/
+	text-transform: capitalize;/*La letra inicial de cada palabra se hace mayúcula*/
+	border-radius: 2rem;/*borde redodneado del botón*/
+	cursor: pointer;/*cambia la forma del cursor al pasar encima del botón*/
+}
+
+
+.container-options span.active {
+	background-color: var(--primary-color);/*cololr de fondo del botón*/
+	color: #fff;/*color de letras*/
+}
+
+/* Products repetir un patrón de columnas, 
+ajustarán al contendor minmax colum fr felxible */
+
+.container-products {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);/* Tres columnas */
+	gap: 2rem;	/* Espacio entre los productos */
+	justify-content: center;
+	margin: 0 auto;
+	width: 90%;/* Ajusta el ancho del contenedor según tu necesidad */
+}
+
+.card-product {
+	display: flex;
+	flex-direction: column;
+	padding: 2.5rem 2.5rem;
+	align-items: center;
+	border: 0.1rem solid #ddd;/* color de la liena del borde de la caja*/
+	background-color: #2321219b;
+	border-radius: 1rem;
+	transition: box-shadow 0.3s ease;/* Suaviza el cambio de sombra */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	text-align: center;
+
+}
+
+
+.card-product:hover {
+	box-shadow: 5px 5px 30px rgba(201, 190, 190, 0.883);/* Sombra al pasar el cursor */
+}
+
+.container-img {
+	transition: box-shadow 0.3s ease;	/* Suaviza el cambio de sombra */
+	position: relative;
+}
+
+.container-img:hover {
+	box-shadow: 5px 5px 30px rgba(201, 190, 190, 0.883);/* Sombra al pasar el cursor */
+}
+
+
+.container-img img {
+	width: 100%;/*ancho de imágen*/
+}
+
+.container-img .discount {
+
+	position: absolute;
+	left: 0;
+	background-color: var(--three-color);
+	color: #fff;
+	padding: 2px 1.2rem;
+	border-radius: 1rem;
+	font-size: 1.2rem;
+}
+
+/* Más Vendidos */
+
+.card-product:hover .discount {
+	background-color: #000;
+}
+
+/** lentamente, acelere en md y se detenga al end**/
+.button-group {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	position: absolute;
+	top: 0;
+	right: -3rem;
+	z-index: -1;
+	transition: all 0.4s ease;
+}
+
+/**lento, acelere en md 
+y se detenga en the end**/
+
+.button-group span {
+	border: 1px solid var(--primary-color);
+	padding: 0.8rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.4s ease;
+}
+
+.button-group span:hover {
+	background-color: var(--primary-color);
+}
+
+.button-group span i {
+	font-size: 1.5rem;
+	color: var(--background-color);
+}
+
+.button-group span:hover i {
+	color: #fff;
+}
+
+.card-product:hover .button-group {
+	z-index: 0;
+	right: -1rem;
+}
+
+.card-product {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem; /* Espacio entre la imagen y el contenido de la tarjeta */
+}
+
+.container-img {
+	position: relative;
+	width: 100%; /* Ajusta el tamaño del contenedor de la imagen */
+}
+
+.content-card-product {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem; /* Espacio entre los elementos dentro del contenido */
+}
+
+.stars {
+	display: flex;
+	justify-content: center	/* Centra las estrellas horizontalmente */
+}
+
+.product-name {
+	text-align: center;	/* Centra el nombre del producto */
+	font-size: 1.5rem;/* Ajusta el tamaño de la fuente según el diseño */
+}
+
+.button-grid {
+	display: grid;
+	grid-template-areas:
+		"price button add-cart ";
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1rem;/* Espacio entre columnas */
+}
+
+.add-cart {
+	grid-area: add-cart;
+}
+
+.button {
+	grid-area: button;
+	display: flex;
+	align-items: center;	/* Centra el contenido verticalmente */
+	justify-content: center;	/* Centra el contenido horizontalmente */
+}
+
+.price {
+	grid-area: price;
+}
+
+
+.stars {
+	grid-row: 1/2;
+	grid-column: 1/-1;
+}
+
+
+
+.stars i {
+
+	transition: box-shadow 0.3 ease;
+	font-size: 1.3rem;
+	color: var(--second-color);
+	-webkit-box-reflect: below 1px linear-gradient(transparent, #0002);
+}
+
+.stars i:hover {
+	box-shadow: 5px 5px 30px gold;/* Sombra al pasar el cursor */
+}
+
+.content-card-product h3 {
+	grid-row: 2/3;
+	grid-column: 1/-1;
+	font-weight: 400;
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+	cursor: pointer;
+
+}
+
+.content-card-product h3:hover {
+	color: var(--background-color);
+}
+
+/**lento, acelere en md 
+y se detenga en the end**/
+
+
+/***Borde de botón de canasta***/
+
+
+.add-cart {
+	justify-self: start;
+	border: 2px solid var(--four-color);
+	padding: 1.5rem;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.4s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.add-cart:hover {
+	background-color: var(--dark-color);
+}
+
+.add-cart i {
+	font-size: 1.5rem;
+	color: var(--four-color);
+}
+
+.add-cart:hover i {
+	color: #fff;
+}
+
+.content-card-product .price {
+	justify-self: end;
+	align-self: center;
+	font-size: 1.7rem;
+	font-weight: 600;
+}
+
+/**efecto visual de tachado**/
+.content-card-product .price span {
+	font-size: 1.5rem;
+	font-weight: 400;
+	text-decoration: line-through;
+	color: #e6e4e4;
+	margin-left: 0.5rem;
+}
+
+
+
+
+
+
+/* *************** */
+/* Caja de reseñas */
+/* *************** */
+
+.separation {
+	display: flex;
+	justify-content: center;/* Centra horizontalmente */
+	align-items: center;/* Centra verticalmente */
+	min-height: 95vh;/* Asegura que ocupe toda la altura de la ventana */
+	margin: 0;/* Elimina margen por defecto */
+
+}
+
+
+
+
+.box {
+	transition: box-shadow 0.3s ease;/* Suaviza el cambio de sombra */
+	max-width: 600px;
+	margin: 50px auto;
+	background: #3d39398c;/* color de fondo de la caja */
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.box:hover {
+	box-shadow: 5px 5px 30px rgba(245, 243, 243, 0.883);
+	/* Sombra al pasar el cursor */
+}
+
+.box1 {
+	margin: 0 0 20px 0;
+	font-size: 12px;
+	color: gold;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+textarea {
+	width: 100%;
+	height: 150px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-size: 1.5em;
+	box-sizing: border-box;
+	resize: none;/* Evita el cambio de tamaño *//* overflow-y: auto; *//* Comentado para eliminar la barra de desplazamiento */
+}
+
+input[type="email"] {
+	width: 100%;
+	padding: 3rem;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+.warning {
+	color: red;
+	font-size: 1.2rem;
+	margin: 0;
+	display: none;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;/* Espaciado entre elementos */
+}
+
+
+
+input[type="email"] {
+	padding: 0.5rem;
+	border-radius: 0.1rem;
+	width: 99%;	/* Asegura que el input ocupe el 100% del ancho disponible */
+	font-size: 1.2rem;/* Ajusta el tamaño de la fuente */
+}
+
+
+.content p {
+	font-size: 1.4rem;
+	color: #fff;
+	font-weight: 400;
+}
+
+.title-footer {
+	font-weight: 600;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+}
+
+.content input {
+	outline: none;
+	background: none;
+	border: none;
+	border-bottom: 2px solid var(--second-color);
+	cursor: pointer;
+	padding: 0.5rem 0 1.2rem;
+	color: var(--second-color);
+	display: block;
+	margin-bottom: 2rem;
+	margin-top: 1rem;
+	width: 100%;
+	font-family: inherit;
+}
+
+.content textarea {
+	outline: none;
+	background: none;
+	border: 0.5px solid gold;
+	text-align: center;
+	border-radius: 0.5em;
+	border-bottom: 2px solid var(--second-color);
+	cursor: pointer;
+	padding: 0.5rem 0 1.2rem;
+	color: var(--second-color);
+	display: block;
+	margin-bottom: 2rem;
+	margin-top: 1rem;
+	width: 100%;
+	font-family: inherit;
+}
+
+.content textarea::-webkit-input-placeholder {
+	color: gold;
+}
+
+
+
+.content input::-webkit-input-placeholder {
+	color: gold;
+}
+
+.content button {
+	transition: box-shadow 0.3s ease;
+	border: none;
+	background-color: #000;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 1rem 3rem;
+	border-radius: 2rem;
+	font-size: 1.4rem;
+	font-family: inherit;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.content button:hover {
+	box-shadow: 5px 10px 16px rgba(0, 0, 0, 0.7);
+}
+
+.content button:hover {
+	background-color: var(--first-color);
+	color: var(--primary-color);
+}
+
+
+
+
+/* *************************** */
+/*            Footer           */
+/* *************************** */
+
+
+/* Pie de página */
+footer {
+	max-width: 100%;
+	transition: box-shadow 0.3s ease;
+	background-color: #000000;	/* Fondo negro */
+	color: #FFFFFF;	/* Texto blanco */
+	padding: 3rem 2rem;/* Padding del pie de página */
+	text-align: center;
+	border: 1px solid #ddd;
+	/* color de la liena del borde de la caja*/
+}
+
+footer:hover {
+	box-shadow: 5px 10px 50px rgba(252, 252, 252, 0.725);
+}
+
+.highlight-link {
+	font-size: 1.4rem;/* Tamaño de fuente más grande */
+	font-weight: bold;/* Texto en negrita */
+	margin-bottom: 3.5%;/* Espacio inferior */
+	display: inline-block;/* Mostrar como bloque */
+	color: #bdbcbc;/* Color blanco para "Nuestro Equipo" */
+	position: relative;/* Posicionamiento relativo */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;/* Espacio entre el icono y el texto */
+    text-decoration: none;/* Quitar subrayado del enlace */
+}
+
+.highlight-link i {
+	color: #FFFFFF;/* Icono en blanco */
+}
+
+.highlight-link:hover {
+	color: gold;	/* Cambio a color semitransparente al pasar el mouse */
+}
+.contenido{
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.footer-content {
+	text-align: left;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.footer-section {
+	margin: 2.5%;
+	text-align: left;
+	max-width: 30%;
+}
+
+.footer-title {
+	font-size: 1.2rem;/* Tamaño del título */
+	margin-bottom: 3%;/* Espacio inferior */
+	font-weight: bold;
+	color: gold;/* Color azul muy oscuro del título */
+}
+
+.social-icons {
+	display: flex;
+	gap: 1rem;/* Espacio entre iconos */
+	margin-top: 2.5%;
+}
+
+.social-icons a {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.5rem;/* Tamaño */
+	height: 2.5rem;/* Tamaño */
+	border-radius: 50%;
+	color: #FFFFFF;/* Color de los íconos */
+	font-size: 1.2rem;/* Tamaño de fuente */
+	transition: background-color 0.3s ease;
+}
+
+.social-icons a.facebook {
+	background-color: #102d6a;
+}
+
+.social-icons a.facebook:hover {
+	background-color: #2c14e9;
+}
+
+.social-icons a.whatsApp {
+	background-color: #098436;
+}
+
+.social-icons a.whatsApp:hover {
+	background-color: #1ea24e;
+}
+
+.social-icons a.instagram {
+	background: linear-gradient(45deg,
+			#a50707,/* colores de Instagram*/
+			#941942,
+			#c13584,
+			#431164,
+			#172778);
+}
+
+.social-icons a.instagram:hover {
+	background: linear-gradient(45deg,
+			#a14545,
+			#964170,
+			#703a66,
+			#312d61,
+			#354bae);
+}
+
+.footer-links {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.footer-links a {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;/* Espacio entre el ícono y el texto */
+	color: #888888;/* Color gris claro inicial del texto */
+	transition: color 0.3s ease;/* Transición de color */
+	text-decoration: none;/* Quitar subrayado del enlace */
+}
+
+.footer-links a:hover {
+	color: gold;/* Cambio a color */
+}
+
+.footer-links a i {
+	color: #FFFFFF;/* Color de los íconos en blanco */
+}
+
+.footer-bottom {
+	margin-top: 1.5%;
+	font-size: 1rem;/* Ajuste de tamaño */
+	color: #d0cdcd;/* Color gris claro */
+	font-weight: normal;/* Peso normal */
+}
+
+.contact-info p {
+	margin: 0.7% 0;
+	color: #888888;/* Color gris claro para la información de contacto */
+}
+
+.contact-info {
+	font-size: 0.9rem;
+	color: #888888;
+	/* Color gris claro para la información de contacto */
+}
+
+
+
+/* ********************************** */
+/*       MEDIA QUERIES -- 1180px       */
+/* ********************************** */
+@media (max-width: 1180px) {
+	html {
+		font-size: 55%;
+	}
+
+
+
+	.logo {
+
+		top: -3rem;
+
+	}
+
+	.img-background {
+		max-width: 100%;
+		overflow-x: hidden; /*No permite que haya un dezplazamiento horizontal*/
+		background-size: 125rem;
+	
+	}
+
+	
+	.button-grid {
+		grid-template-areas:
+			"price button"
+			"add-cart";
+		grid-template-columns: 1fr;/* Una sola columna */
+		align-items: center;/* Centra el contenido verticalmente */
+		justify-content: center;/* Centra el contenido horizontalmente */
+	}
+
+
+	.overlay {
+		width: 94.5%;
+		/* Aumenta el ancho del overlay en pantallas más pequeñas */
+		max-width: 94.5%;
+		font-size: 0.9em;
+		/* Reduce el tamaño de fuente para mejorar la legibilidad en pantallas pequeñas */
+	}
+
+	.box {
+		margin: 0.5rem;
+		/* Reduce el margen en pantallas más pequeñas */
+		max-width: 90%;
+		/* Asegura que la caja no exceda el 90% del ancho en pantallas pequeñas */
+	}
+
+	.carousel {
+		margin-top: 8%;
+	}
+
+
+	.heading-1 {
+		font-size: 2.4rem;
+	}
+
+	.container-options {
+		align-items: center;
+	}
+
+	.container-options span {
+		text-align: center;
+		padding: 1rem 2rem;
+	}
+
+	/*ajustarán automáticamente el número 
+	de colum Unid y 1 fr expan ta min*/
+
+	.container-products {
+		grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+	}
+
+
+}
+
+
+@media (max-width: 768px) {
+	header {
+	  padding: 60px 10px;
+	}
+  
+	header h1 {
+	  font-size: 2.2em;
+	}
+  
+	header p {
+	  font-size: 1em;
+	}
+  
+	.footer-content {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	.footer-section {
+	  max-width: 100%;
+	  text-align: center;
+	}
+  
+	.comment-box {
+	  padding: 15px;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	header {
+	  padding: 40px 10px;
+	}
+  
+	header h1 {
+	  font-size: 1.8em;
+	}
+  
+	header p {
+	  font-size: 0.9em;
+	}
+  
+	.footer-section {
+	  margin: 5px 0;
+	}
+  
+	.social-icons a {
+	  width: 2rem;
+	  height: 2rem;
+	  font-size: 1rem;
+	}
+  
+	.comment-box {
+	  padding: 10px;
+	}
+  
+	.toggle-menu {
+	  font-size: 2em;
+	}
+  }
+
+
+
+/* ********************************** */
+/*       MEDIA QUERIES -- 468px       */
+/* ********************************** */
+@media (max-width: 468px) {
+	html {
+		font-size: 42.5%;
+	}
+
+	.overlay {
+		width: 97.5%;
+		/* Aumenta aún más el ancho del overlay en pantallas muy pequeñas */
+		max-width: 97.5%;
+		font-size: 10px;
+		/* Reduce el tamaño de fuente para pantallas muy pequeñas */
+		padding: 0.5rem;
+		/* Reduce el padding para ahorrar espacio en pantallas pequeñas */
+	}
+
+	.box {
+		margin: 0.5rem;
+		/* Reduce el margen en pantallas más pequeñas */
+		max-width: 90%;
+		/* Asegura que la caja no exceda el 90% del ancho en pantallas pequeñas */
+	}
+
+	.card-feature {
+		flex-direction: column;
+		border-radius: 2rem;
+	}
+
+	.feature-content p {
+		font-size: 1.4rem;
+		text-align: center;
+	}
+
+	.feature-content span {
+		font-size: 1.6rem;
+		text-align: center;
+	}
+
+	.container-options span {
+		font-size: 1.8rem;
+		padding: 1rem 1.5rem;
+		font-weight: 500;
+	}
+
+	/*ajustarán automáticamente el número 
+	de colum Unid y 1 fr expan ta min*/
+
+	.container-products {
+		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+		gap: 1rem;
+	}
+
+	.content-card-product h3 {
+		font-size: 2.2rem;
+	}
+
+	.menu-footer {
+		grid-template-columns: 1fr;
+	}
+
+	.content p {
+		font-size: 1.6rem;
+	}
+}

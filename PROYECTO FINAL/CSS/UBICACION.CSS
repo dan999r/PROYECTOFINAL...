@@ -1,0 +1,388 @@
+     /* Estilos generales de la página */
+     body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url(Fondo\ Principal.jpg);
+        background-size: cover;
+        background-position: center;
+        color: #FFFFFF; /* Texto principal blanco */
+        height: auto;
+        width: auto;
+      }
+  
+      header {
+        position: relative;
+        text-align: center;
+        color: #fff;
+        padding: 80px 20px; /* Espacio interior del encabezado */
+      }
+    
+      /* Fondo semi-transparente para  el titulo*/
+      header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+        z-index: 0;
+  
+      }
+    
+      /* Contenedor del logotipo */
+      .container {
+        position: relative;
+      }
+    
+  
+      .logo {
+        position: absolute;
+        top: -60px;
+        right: 20px;
+        z-index: 999; /* Logotipo sobre el encabezado */
+      }
+      .logo img {
+        max-width: 115px;
+        border: 2px solid #ffffff; /* linea blanca  alrededor */
+        border-radius: 43%; /* redondea el logo */
+      }
+    
+      header {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding: 80px 20px; 
+  }
+  
+  .container {
+    position: relative;
+  }
+  
+  .logo {
+    position: absolute;
+    top: -60px;
+    right: 20px;
+    z-index: 999;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: bold;
+    z-index: 1;
+    position: relative;
+    margin-bottom: 20px; /* Espacio entre el título y la introducción */
+  }
+  
+  .texto-intro {
+    font-size: 1.2em;
+    margin-top: 10px;
+    line-height: 1.6;
+    z-index: 1;
+    position: relative;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(243, 241, 241, 0.3); /* Sombra alrededor */
+  }
+  
+  
+  
+  .resaltado {
+    color: #210ce4a9;
+    font-weight: bold;
+  }
+  
+       /* Estilos del menú de navegación */
+       nav {
+        position: fixed;
+        top: 0;
+        left: -279px; /*oculta el menu*/
+        width: 250px;
+        height: 100%;
+        padding: 15px;
+        transform: translateX(0);
+        transition: left 0.3s ease; /* Transición suave al mostrar y ocultar */
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+        padding-top: 75px; /* Espacio superior para los enlaces de navegación */
+      }
+       
+      /* Mostrar el menú lateral cuando está activo */
+      nav.active {
+        left: 0;
+      }
+    
+      /* Estilos de la lista de navegación */
+      nav .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: justify; /* Justifica el contenido del menú */
+  }
+  
+  
+      nav .menu li {
+        margin-bottom: 17px; /* da espacio al menu mientas mas se le sube mas separado queda*/
+      }
+      nav .menu a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2em;
+        display: block;   /* le ayuda a mantener lo q se le ordena a margin-bottom*/
+        padding: 10px 0;
+        transition: color 0.3s ease, text-decoration 0.3s ease;
+      }
+      nav .menu a:hover {
+        color: #b6b5b3; /* Cambio de color al pasar el mouse */
+      }
+    
+      /* Botón de menú para dispositivos móviles */
+      .toggle-menu {
+        position: fixed;
+        top: 11px;
+        left: 20px;
+        font-size: 2.5em;
+        color: #fbf7f7;
+        cursor: pointer;
+        z-index: 1001;
+      }
+     .menu a i {
+    color: #faf7f7; /* Color general para todos los íconos */
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+  }
+  
+  
+      /* Pie de página */
+      footer {
+        background-color: #000000; /* Fondo negro */
+        color: #FFFFFF; /* Texto blanco */
+        padding: 40px 20px; /* Padding del pie de página */
+        text-align: center;
+        border-top: 2px solid #333333; /* Borde superior gris oscuro */
+      }
+      .highlight-link {
+        font-size: 1.4rem; /* Tamaño de fuente más grande */
+        font-weight: bold; /* Texto en negrita */
+        margin-bottom: 20px; /* Espacio inferior */
+        display: inline-block; /* Mostrar como bloque */
+        color:#bdbcbc ; /* Color blanco para "Nuestro Equipo" */
+        position: relative; /* Posicionamiento relativo */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem; /* Espacio entre el icono y el texto */
+        text-decoration: none; /* Quitar subrayado del enlace */
+      }
+      .highlight-link i {
+        color: #FFFFFF; /* Icono en blanco */
+      }
+      .highlight-link:hover {
+        color: rgba(246, 238, 238, 0.934); /* Cambio a color semitransparente al pasar el mouse */
+      }
+      .footer-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+      .footer-section {
+        margin: 10px;
+        text-align: left;
+        max-width: 300px;
+      }
+      .footer-title {
+        font-size: 1.2rem; /* Tamaño del título */
+        margin-bottom: 10px; /* Espacio inferior */
+        font-weight: bold;
+        color: #100573; /* Color azul muy oscuro del título */
+      }
+      .social-icons {
+        display: flex;
+        gap: 1rem; /* Espacio entre iconos */
+        margin-top: 10px;
+      }
+      .social-icons a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem; /* Tamaño */
+        height: 2.5rem; /* Tamaño */
+        border-radius: 50%;
+        color: #FFFFFF; /* Color de los íconos */
+        font-size: 1.2rem; /* Tamaño de fuente */
+        transition: background-color 0.3s ease;
+      }
+      .social-icons a.facebook {
+        background-color: #102d6a;
+      }
+      .social-icons a.facebook:hover {
+        background-color:  #2c14e9;
+      }
+      .social-icons a.whatsApp {
+        background-color: #098436;
+      }
+      .social-icons a.whatsApp:hover {
+        background-color: #1ea24e;
+      }
+      .social-icons a.instagram {
+        background: linear-gradient(
+          45deg,
+          #a50707,    /* colores de Instagram*/
+          #941942,
+          #c13584,
+          #431164,
+          #172778
+        );
+      }
+      .social-icons a.instagram:hover {
+        background: linear-gradient(
+          45deg,
+        #a14545,   
+          #964170,
+          #703a66,
+          #312d61,
+          #354bae
+        );
+      }
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .footer-links a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem; /* Espacio entre el ícono y el texto */
+        color: #888888; /* Color gris claro inicial del texto */
+        transition: color 0.3s ease; /* Transición de color */
+        text-decoration: none; /* Quitar subrayado del enlace */
+      }
+      .footer-links a:hover {
+        color: rgba(255, 255, 255, 0.7); /* Cambio a color semitransparente al pasar el mouse */
+      }
+      .footer-links a i {
+        color: #FFFFFF; /* Color de los íconos en blanco */
+      }
+      .footer-bottom {
+        margin-top: 20px;
+        font-size: 1rem; /* Ajuste de tamaño */
+        color: #d0cdcd; /* Color gris claro */
+        font-weight: normal; /* Peso normal */
+      }
+      .contact-info p {
+        margin: 5px 0;
+        color: #888888; /* Color gris claro para la información de contacto */
+      }
+      .contact-info {
+        font-size: 0.9rem;
+        color: #888888; /* Color gris claro para la información de contacto */
+      }
+  
+  
+  
+  
+  
+  
+  
+  
+          /* Estilos para el contenido principal */
+          main {
+              padding: 60px; /* Espacio interno */
+          }
+  
+  
+  
+  
+      
+  
+      
+          /* Estilos para el contenedor del mapa y la información */
+          .contenedor-mapa-info {
+              display: flex; /* Usa flexbox para alinear elementos */
+              flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+              justify-content: center; /* Centra los elementos */
+              gap: 20px; /* Espacio entre elementos */
+              margin-bottom: 20px; /* Espacio inferior */
+          }
+  
+          
+    /* Ajustes para el contenedor del mapa */
+    .mapa {
+      position: relative; /* Necesario para que el ::after funcione */
+      flex: 1;
+      max-width: 600px;
+      height: 300px;
+      border-radius: 8px;
+     
+      box-shadow: 0 4px 12px rgba(248, 248, 248, 0.488);
+    }
+  
+    .mapa::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro y transparente */
+      pointer-events: none;
+      border-radius: 5px; /* Bordes redondeados para coincidir con el mapa */
+    }
+  
+  
+  
+          /* Estilos para la información de la dirección */
+          .informacion {
+              flex: 1; /* Permite que la información ocupe el espacio disponible */
+              max-width: 400px; /* Ancho máximo */
+              padding: 20px; /* Espacio interno */
+              background: rgba(0, 0, 0, 0.63); /* Fondo semi-transparente */
+          border-radius: 8px; /* Bordes redondeados */
+              box-shadow: 0 4px 12px rgba(248, 248, 248, 0.488); /* Sombra de la información */
+          }
+  
+          /* Estilos para los encabezados en la información */
+          .informacion h2 {
+              margin-top: 0; /* Elimina margen superior */
+              font-size: 1.5em; /* Tamaño de fuente */
+             color: yellow;
+          }
+  
+          /* Estilos para los párrafos en la información */
+          .informacion p {
+              font-size: 1.1em; /* Tamaño de fuente */
+              margin: 10px 0; /* Márgenes superior e inferior */
+          }
+  
+  
+          /* Estilos para el iframe del mapa */
+          iframe {
+              width: 100%; /* Ancho completo del contenedor */
+              height: 100%; /* Altura completa del contenedor */
+              border: 0; /* Sin borde */
+          }
+  
+          /* Estilos para pantallas pequeñas */
+          @media (max-width: 768px) {
+              .contenedor-mapa-info {
+                  flex-direction: column; /* Apila los elementos verticalmente */
+                  align-items: center; /* Centra los elementos */
+              }
+  
+              .mapa, .informacion {
+                  max-width: 100%; /* Ancho completo del contenedor */
+              }
+  
+              
+          }
+      
+  
+  
+  
+  

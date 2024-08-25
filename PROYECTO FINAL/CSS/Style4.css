@@ -1,0 +1,282 @@
+html{
+    font-size: 69.5%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #010306dd;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+header {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding: 80px 20px; /* Espacio interior del encabezado */
+  }
+
+  /* Fondo semi-transparente para  el titulo*/
+  header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+    z-index: 0;
+  }
+
+  /* Contenedor del logotipo */
+  .container {
+    position: relative;
+  }
+
+
+  .logo {
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    z-index: 999; /* Logotipo sobre el encabezado */
+  }
+  .logo img {
+    max-width: 110px;
+    border: 2px solid #ffffff; /* linea blanca  alrededor */
+    border-radius: 43%; /* redondea el logo */
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0002);
+  }
+
+ 
+  header h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+  header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+  }
+   /* Estilos del menú de navegación */
+   nav {
+    position: fixed;
+    top: 0;
+    left: -279px; /*oculta el menu*/
+    width: 250px;
+    height: 100%;
+    padding: 15px;
+    transform: translateX(0);
+    transition: left 0.3s ease; /* Transición suave al mostrar y ocultar */
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    padding-top: 75px; /* Espacio superior para los enlaces de navegación */
+  }
+   
+  /* Mostrar el menú lateral cuando está activo */
+  nav.active {
+    left: 0;
+  }
+
+  /* Estilos de la lista de navegación */
+  nav .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: justify; /* Justifica el contenido del menú */
+  }
+
+
+  nav .menu li {
+    margin-bottom: 17px; /* da espacio al menu mientas mas se le sube mas separado queda*/
+  }
+  nav .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: block;   /* le ayuda a mantener lo q se le ordena a margin-bottom*/
+    padding: 10px 0;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  nav .menu a:hover {
+    color: gold; /* Cambio de color al pasar el mouse */
+  }
+
+  /* Botón de menú para dispositivos móviles */
+  .toggle-menu {
+    position: fixed;
+    top: 11px;
+    left: 20px;
+    font-size: 2.5em;
+    color: #fbf7f7;
+    cursor: pointer;
+    z-index: 1001;
+  }
+ .menu a i {
+color: #faf7f7; /* Color general para todos los íconos */
+margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+
+
+.container-1{
+    width: 100%;
+    max-width: auto;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 4px 8px white;
+    border-radius: 10px;
+    background-color: #111111e7;
+}
+
+.container-2{
+    background-color: #0000009e;
+    color: gold;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    padding: 20px;
+}
+
+.products, .cart {
+    width: 100%;
+    
+}
+
+.products h2, .cart h2 {
+    border-bottom: 2px solid gold;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: gold;
+}
+
+.product {
+    display: flex;
+    background-color: #1f1d1d97;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+}
+
+.product img {
+    max-width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+    flex: 1;
+}
+
+.product-name {
+    color: #fbfdff;
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    display: block;
+    color: gold;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0002);
+}
+
+.add-to-cart {
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0);
+    color: #faf7f7;
+    border-radius: 2rem ;
+    border: solid 1px gold;
+    cursor: pointer;
+    font-size: 1em;
+    transition: box-shadow 0.3s ease;
+    transition: background-color 0.3s ease;
+ 
+}
+
+
+
+.add-to-cart:hover {
+    box-shadow: 0 4px 8px gold;
+    background-color: gold;
+    color: black;
+    
+}
+
+.cart {
+    background-color: #090909a5;
+    padding: 20px;
+    border: 1px solid gold;
+    color: gold;
+    font-size: 1.3em;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px gold;
+}
+
+.cart-item {
+    margin-bottom: 10px;
+}
+
+.cart-item:last-child {
+    margin-bottom: 0;
+}
+
+.send-invoice{
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0);
+    color: #faf7f7;
+    border-radius: 2rem ;
+    border: solid 1px gold;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.clear-cart{
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0);
+    color: #faf7f7;
+    border-radius: 2rem ;
+    border: solid 1px gold;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.send-invoice:hover{
+    box-shadow: 0 4px 8px gold;
+    background-color: gold;
+    color: black;
+}
+
+.clear-cart:hover{
+    box-shadow: 0 4px 8px gold;
+    background-color: gold;
+    color: black;
+
+}
+
+#total {
+    color:#fbfdff;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}

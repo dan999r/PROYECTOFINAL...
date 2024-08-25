@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre nosotros</title>
+  <link rel="stylesheet" href="CSS/Estilo mision y vision.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="Img/logo1.jpg" alt="Logo de El Sazón de mi Tierra">
+      </div>
+      <div>
+        <h1>Sobre nosotros</h1>
+        <p>El verdadero sabor de nuestra tierra</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="toggle-menu" onclick="toggleMenu()" style="color:gold">☰</div>
+
+  <nav id="side-menu">
+  <ul class="menu">
+    <li><a href="Index.html"><i class="fa-solid fa-home"></i>Inicio</a></li>
+    <li><a href="mision y vision.html"><i class="fa-solid fa-info-circle"></i>Sobre Nosotros</a></li>
+    <li><a href="Carrito.html"><i class="fa-solid fa-shopping-bag"></i>Pedir Ya</a></li>
+    <li><a href="contactos.html"><i class="fa-solid fa-envelope"></i>Contacto</a></li>
+    <li><a href="Nuestra Ubicacion.html"><i class="fa-solid fa-map-marker-alt"></i>Ubicación</a></li>
+    <li><a href="Terminos Y Condiciones.html"><i class="fa-solid fa-file-contract"></i>Términos y Condiciones</a></li>
+    <li><a href="Politica y privacidad.html"><i class="fa-solid fa-shield-alt"></i>Política de privacidad</a></li>
+    <li><a href="Descarga"><i class="fa-solid fa-download"></i>Nuestra App</a></li>
+    <li><a href="Caja de comentarios.html"><i class="fa-solid fa-box"></i></i>Dejanos tu comentario</a></li>
+  </ul>
+  </nav> 
+
+  <div class="info-sections">
+    <div class="info-box">
+      <h2>Historia</h2>
+      <p>El Sazón de Mi Tierra comenzó como un proyecto de un grupo de jóvenes bachilleres en desarrollo de software que querían combinar sus habilidades técnicas con su amor por la buena comida. En 2024, estos estudiantes decidieron aplicar su conocimiento en tecnología para revolucionar el concepto de un restaurante tradicional. Lo que comenzó como una idea en sus aulas se transformó en un restaurante innovador que utiliza tecnología avanzada para mejorar la experiencia gastronómica.</p>
+    </div>
+    <div class="info-box">
+      <h2>Misión</h2>
+      <p>En El Sazón de Mi Tierra, nuestra misión es ofrecer una experiencia culinaria auténtica y enriquecedora, donde los sabores tradicionales de nuestra tierra se mezclan con la creatividad de los jóvenes chefs. Estamos comprometidos con la calidad, la innovación y la sostenibilidad, proporcionando un espacio vibrante y acogedor que celebre la diversidad cultural y el talento emergente de nuestros estudiantes.</p>
+    </div>
+    <div class="info-box">
+      <h2>Visión</h2>
+      <p>
+        Queremos convertirnos en un referente gastronómico en nuestra comunidad, destacando por nuestro compromiso con la autenticidad y la frescura en cada plato. Nuestra visión es ser un punto de encuentro donde los sabores tradicionales se reinventan y se presentan con un toque moderno, creando así un legado culinario que inspire y eduque a futuras generaciones de chefs y comensales. Buscamos fomentar el aprecio por la cocina local y proporcionar una plataforma para que los jóvenes talentos brillen en el mundo de la gastronomía.</p>
+    </div>
+  </div>
+
+ 
+
+  <footer>
+    <a href="equipo.html" class="highlight-link"><i class="fa-solid fa-users"></i>Nuestro Equipo</a>
+  
+  
+  <div class="footer-content">
+    <div class="footer-section">
+      <div class="footer-title">Nuestras Redes</div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61558971046753&mibextid=ZbWKwL" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://wa.me/message/OUJP5V2RV6WVC1" class="whatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/elsazon.de.mi.tierra?igsh=MWtwemk0Y21oaXljMw==" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="section">
+      <div class="footer-title">Información de Contacto</div>
+      <p><i class="fa-solid fa-phone" style="color: #FFFFFF;"></i> <span style="color: #888888;">Cel:74373575</span></p>
+      <p><i class="fa-solid fa-envelope" style="color: #FFFFFF;"></i> <span style="color: #888888;">Email:Sazondemitierra@gmail.com</span></p>
+      <p><i class="fa-solid fa-map-marker-alt" style="color: #FFFFFF;"></i> <span style="color: #888888;">Dirección:Instituto Nacional Ciudad Delgado</span></p>
+    </div>
+    <div class="footer-section footer-links">                           
+      <div class="footer-title">Enlaces Útiles</div>
+      <a href="Terminos Y Condiciones.html" class="terms"><i class="fa-solid fa-file-contract"></i> Términos y Condiciones</a>
+      <a href="Politica y privacidad.html" class="privacy"><i class="fa-solid fa-shield-alt"></i> Política de privacidad</a>
+      <a href="mision y vision.html" class="about"><i class="fa-solid fa-info-circle"></i>Sobre Nosotros</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><strong>&copy;2024 Derechos Reservados El Sazón de mi Tierra</strong></div>
+</footer>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("side-menu");
+      menu.classList.toggle("active");
+    }
+    
+    var sideMenu = document.getElementById("side-menu");
+    sideMenu.addEventListener("mouseleave", function() {
+      sideMenu.classList.remove("active");
+    });
+    
+    var menuLinks = document.querySelectorAll('#side-menu .menu a');
+    menuLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        sideMenu.classList.remove('active');
+      });
+    });
+  </script>
+  <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+</body>

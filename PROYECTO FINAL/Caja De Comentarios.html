@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/CSScomentarios.css">
+  <title>Ver Mas</title>
+</head>
+<body>
+  <div class="img-background">
+		<header>
+			<div class="resposive">
+			<div class="container">
+				<div class="logo">
+					<img src="Img/logo1.jpg" alt="Logo de El Sazón de mi Tierra">
+				</div>
+    
+      <body>
+        <div class="comment-box">
+            <h2>Deja tu Comentario ^^</h2>
+            <form id="comment-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Comentario:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+    
+                <button type="submit">Enviar Comentario</button>
+            </form>
+            <div id="response-message"></div>
+        </div>
+    
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script src="JavaScript/JAVAcomentarios.js"></script> <!-- Enlace al archivo JavaScript -->
+    </body>
+
+    </div>
+  </header>
+  <div class="toggle-menu" onclick="toggleMenu()" style="color:gold">☰</div>
+
+	<nav id="side-menu">
+		<ul class="menu">
+			<li><a href="Index.html"><i class="fa-solid fa-home"></i> Inicio</a></li>
+			<li><a href="mision y vision.html"><i class="fa-solid fa-info-circle"></i> Sobre Nosotros</a></li>
+			<li><a href="Carrito.html"><i class="fa-solid fa-cart-shopping"></i></i> Pedir Ya</a></li>
+			<li><a href="contactos.html"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+			<li><a href="Nuestra Ubicacion.html"><i class="fa-solid fa-map-marker-alt"></i> Ubicación</a></li>
+			<li><a href="Terminos Y Condiciones.html"><i class="fa-solid fa-file-contract"></i> Términos y Condiciones</a></li>
+			<li><a href="Politica y privacidad.html"><i class="fa-solid fa-shield-alt"></i> Política de privacidad</a></li>
+			<li><a href="Descarga"><i class="fa-solid fa-download"></i> Nuestra App</a></li>
+			<li><a href="Caja de comentarios.html"><i class="fa-solid fa-box"></i></i>Dejanos tu comentarios</a></li>
+		</ul>
+	</nav>
+  <!-- Aquí lo que vas a agregar en medio de la pagina-->
+
+  <footer>
+    <a href="creadores.html" class="highlight-link"><i class="fa-solid fa-users"></i> Nuestro Equipo</a>
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-title">Nuestras Redes</div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=61558971046753&mibextid=ZbWKwL" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/message/OUJP5V2RV6WVC1" class="whatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/elsazon.de.mi.tierra?igsh=MWtwemk0Y21oaXljMw==" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-section contact-info">
+        <div class="footer-title">Información de Contacto</div>
+        <p><i class="fa-solid fa-phone" style="color: #FFFFFF;"></i> <span style="color: #888888;">Cel:74373575</span></p>
+        <p><i class="fa-solid fa-envelope" style="color: #FFFFFF;"></i> <span style="color: #888888;">Email:Sazondemitierra@gmail.com</span></p>
+        <p><i class="fa-solid fa-map-marker-alt" style="color: #FFFFFF;"></i> <span style="color: #888888;">Dirección:Instituto Nacional Ciudad Delgado</span></p>
+      </div>
+      <div class="footer-section footer-links">                           
+        <div class="footer-title">Enlaces Útiles</div>
+        <a href="terminos.html" class="terms"><i class="fa-solid fa-file-contract"></i> Términos y Condiciones</a>
+        <a href="privacidad.html" class="privacy"><i class="fa-solid fa-shield-alt"></i> Política de privacidad</a>
+        <a href="mision y vision.html" class="about"><i class="fa-solid fa-info-circle"></i>Sobre Nosotros</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2024 El Sazón de mi Tierra. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('side-menu').classList.toggle('active');
+    }
+  </script>
+
+<script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+</body>
+</html>
